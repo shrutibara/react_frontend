@@ -1,0 +1,31 @@
+.side {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 200px;
+    background-color: #92f0a6;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    transition: transform 0.3s;
+    margin-top: 80px;
+}
+
+.side:hover {
+    transform: perspective(1200px) rotateY(-10deg);
+}
+
+.side a {
+    color: #151313;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 10px 0;
+    transition: color 0.3s;
+    font-family: cursive;
+}
+
+.side a:hover {
+    color: #007bff;
+}

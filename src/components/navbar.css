@@ -1,0 +1,37 @@
+/* navbar.css */
+
+.home-container {
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    /* Aligns the heading and button to the opposite ends */
+    align-items: center;
+    background-color: #be72f1;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.home-heading-style {
+    font-size: 24px;
+    margin: 0;
+}
+
+.button-css {
+    background-color: #442fc9;
+    color: #fff;
+    border: none;
+    max-width: 90px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button-css:hover {
+    background-color: #c1bade;
+}

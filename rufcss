@@ -1,0 +1,39 @@
+.blog-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.heading_blog {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.blog-post {
+    width: 80%;
+    max-width: 400px;
+    /* Adjust the max-width as needed */
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #332727;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+
+.blog-post h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.blog-post p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* blog.css */
+
+/* Styling for the like button with FontAwesome icon */
+
+  
