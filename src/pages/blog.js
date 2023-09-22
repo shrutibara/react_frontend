@@ -13,7 +13,7 @@ function Blog() {
         let userObj = JSON.parse(sessionStorage.getItem("usesDetailes"));
         console.log(userObj._id);
 
-        axios.get(`http://https://backnode-becd.onrender.com:4000/api/posts?userId=${userObj._id}`)
+        axios.get(`https://backnode-becd.onrender.com/api/posts?userId=${userObj._id}`)
             .then(response => {
                 // setPosts(response.data);
                 setBlogData(response.data);
@@ -25,7 +25,7 @@ function Blog() {
 
     const handleLikeClick = (postId) => {
         console.log(postId);
-        axios.post(`http://https://backnode-becd.onrender.com:4000/api/posts/${postId}/like`)
+        axios.post(`https://backnode-becd.onrender.com/api/posts/${postId}/like`)
             .then((response) => {
                 console.log('Like updated successfully', response);
 

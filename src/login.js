@@ -50,7 +50,7 @@ if (!handleValidation()) {
     return;
     }
 const data = { username, password };
-axios.post('http://https://backnode-becd.onrender.com:4000/api/login', data)
+axios.post('https://backnode-becd.onrender.com/api/login', data)
 .then(response => {
 console.log(response.data.username);
 console.log(response.data.password);
