@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import axios from "axios";
 import './admin.css';
-import MainPages from "../components/MainPage";
+// import MainPages from "../components/MainPage";
 
 
 
 function Admin() {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
-  const [isPosted, setIsPosted] = useState(false); // Added state for the alert
+  // const [isPosted, setIsPosted] = useState(false); // Added state for the alert
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -23,7 +23,7 @@ function Admin() {
     axios.post("http://https://backnode-becd.onrender.com:4000/api/posts", data)
       .then((response) => {
         if (response.status === 200) {
-          setIsPosted(true); // Set the state to true on success
+          // setIsPosted(true); // Set the state to true on success
           setTitle("");
           setDescription("");
         } else {

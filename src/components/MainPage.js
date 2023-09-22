@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from './navbar';
 import Sidebar from './sidebar';
 import Navpage from './navpage';
-import Blog from '../pages/blog';
+// import Blog from '../pages/blog';
 const MainPages=({onLogout})=>{
     return(
         <>

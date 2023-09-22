@@ -3,10 +3,10 @@ import axios from 'axios';
 import './blog.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
-import MainPages from '../components/MainPage';
+// import MainPages from '../components/MainPage';
 
 function Blog() {
-    const [posts, setPosts] = useState([]);
+    // const [posts, setPosts] = useState([]);
     const [blogData, setBlogData] = useState([]);
 
     useEffect(() => {
@@ -15,7 +15,7 @@ function Blog() {
 
         axios.get(`http://https://backnode-becd.onrender.com:4000/api/posts?userId=${userObj._id}`)
             .then(response => {
-                setPosts(response.data);
+                // setPosts(response.data);
                 setBlogData(response.data);
             })
             .catch(error => {
