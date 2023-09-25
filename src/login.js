@@ -69,11 +69,14 @@ navigate('/mainpage');
 console.log('Error fetching users:', error);
 });
 
-
+const handleGoogleLogin = () => {
+    // Redirect the user to the Google OAuth authorization URL
+    window.location.href = 'https://blogapp-csk3.onrender.com/auth/google';
+  };
 
 };
 
-return (
+return (<>
 <div className="login-container">
 <h2 className='login-heading'>Login</h2>
 <form className="login-form" onSubmit={handleLogin}>
@@ -101,7 +104,10 @@ value={password}
             </form>
             <div className="login-error-message">{loginError}</div>
         </div>
-    );
+        <div>
+        <button className="login-button" onClick={handleGoogleLogin}>Continue with Google </button>
+  </div>
+   </> );
 }
 
 export default Login;
