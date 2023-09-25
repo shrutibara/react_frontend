@@ -5,12 +5,11 @@ import Admin from "../pages/admin";
 function Navpage(){
     return(
         <>
-      <Routes>
+<Routes>
 <Route path="/" element={<Blog/>}/>
 <Route path="/admin" element={<Admin/>}/>
 <Route path="/blog" element={<Blog/>}/>
-
-      </Routes>
+</Routes>
         </>
     )
 }
