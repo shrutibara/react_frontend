@@ -69,11 +69,12 @@ function Login(props) {
                 console.log('Error fetching users:', error);
             });
 
-        const handleGoogleLogin = () => {
-            // Redirect the user to the Google OAuth authorization URL
-            window.location.href = 'https://blogapp-csk3.onrender.com/auth/google';
-        };
+        
 
+    };
+    const handleGoogleLogin = () => {
+        // Redirect the user to the Google OAuth authorization URL
+        window.location.href = 'https://blognode-5i5f.onrender.com/auth/google';
     };
 
     return (<>
@@ -105,7 +106,7 @@ function Login(props) {
             <div className="login-error-message">{loginError}</div>
         </div>
         <div>
-            <button className="login-button" onClick={handleGoogleLogin}>
+            <button className="google-button" onClick={handleGoogleLogin}>
                 Continue with Google </button>
         </div>
     </>);
