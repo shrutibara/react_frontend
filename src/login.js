@@ -73,7 +73,6 @@ function Login(props) {
 
     };
     const handleGoogleLogin = () => {
-        // Redirect the user to the Google OAuth authorization URL
         window.location.href = 'https://blognode-5i5f.onrender.com/auth/google';
     };
 
