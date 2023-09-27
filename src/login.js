@@ -44,70 +44,71 @@ function Login(props) {
 
 
 
-const handleLogin = (event) => {
-event.preventDefault();
-if (!handleValidation()) {
-    return;
-    }
-const data = { username, password };
-axios.post('https://backnode-becd.onrender.com/api/login', data)
-.then(response => {
-console.log(response.data.username);
-console.log(response.data.password);
-console.log(response.data.s);
-// setUsers(response.data)
-if (response.data.username) {
-sessionStorage.setItem('usesDetailes',JSON.stringify(response.data));
-props.onLogin();
-navigate('/mainpage');
+    const handleLogin = (event) => {
+        event.preventDefault();
+        if (!handleValidation()) {
+            return;
+        }
+        const data = { username, password };
+        axios.post('https://blognode-5i5f.onrender.com/api/login', data)
+            .then(response => {
+                console.log(response.data.username);
+                console.log(response.data.password);
+                console.log(response.data.s);
+                // setUsers(response.data)
+                if (response.data.username) {
+                    sessionStorage.setItem('usesDetailes', JSON.stringify(response.data));
+                    props.onLogin();
+                    navigate('/mainpage');
 
-}
+                }
 
-})
-.catch(error => {
+            })
+            .catch(error => {
 
-console.log('Error fetching users:', error);
-});
+                console.log('Error fetching users:', error);
+            });
 
-const handleGoogleLogin = () => {
-    // Redirect the user to the Google OAuth authorization URL
-    window.location.href = 'https://blogapp-csk3.onrender.com/auth/google';
-  };
+        const handleGoogleLogin = () => {
+            // Redirect the user to the Google OAuth authorization URL
+            window.location.href = 'https://blogapp-csk3.onrender.com/auth/google';
+        };
 
-};
+    };
 
-return (<>
-<div className="login-container">
-<h2 className='login-heading'>Login</h2>
-<form className="login-form" onSubmit={handleLogin}>
-<input
-type="text"
-className="login-input"
-placeholder="Username"
-value={username}
-onChange={(e) => setUsername(e.target.value)}
-/>
-<input
-type="password"
-className="login-input"
-placeholder="Password"
-value={password}
+    return (<>
+        <div className="login-container">
+            <h2 className='login-heading'>Login</h2>
+            <form className="login-form" onSubmit={handleLogin}>
+                <input
+                    type="text"
+                    className="login-input"
+                    placeholder="Username"
+                    value={username}
+                    onChange={(e) => setUsername(e.target.value)}
+                />
+                <input
+                    type="password"
+                    className="login-input"
+                    placeholder="Password"
+                    value={password}
                     onChange={(e) => setPassword(e.target.value)}
                 />
                 <button type="submit" className="login-button"> {/* Use type="submit" for the button */}
-                Login
+                    Login
                 </button>
                 <p className='login-p'>
                     Don't have an account?{' '}<span
-                        className='login-span' onClick={()=>{props.togglesignup()}} style={{ cursor: 'pointer' }}>sign up</span>
+                        className='login-span' onClick={() => { props.togglesignup() }} style={{ cursor: 'pointer' }}>sign up</span>
                 </p>
             </form>
             <div className="login-error-message">{loginError}</div>
         </div>
         <div>
-        <button className="login-button" onClick={handleGoogleLogin}>Continue with Google </button>
-  </div>
-   </> );
+            <button className="login-button" onClick={handleGoogleLogin}>
+                Continue with Google </button>
+        </div>
+    </>);
 }
 
 export default Login;

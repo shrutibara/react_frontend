@@ -23,7 +23,7 @@ const Signup = (props) => {
 
 
         axios
-            .post('https://backnode-becd.onrender.com/users/register', data)
+            .post('https://blognode-5i5f.onrender.com/users/register', data)
             .then((response) => {
                 console.log('Response status:', response.status);
                 if (response.status === 200) {

@@ -20,7 +20,7 @@ function Admin() {
       author: JSON.parse(userId)._id
     };
 
-    axios.post("https://backnode-becd.onrender.com/api/posts", data)
+    axios.post("https://blognode-5i5f.onrender.com/api/posts", data)
       .then((response) => {
         if (response.status === 200) {
           // setIsPosted(true); // Set the state to true on success
